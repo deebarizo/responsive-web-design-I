@@ -154,9 +154,10 @@ h5 {
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
 div.container {
-  width: 876px;
+  max-width: 1024px;
   margin: 0 auto;
   font-size: 0px;
+  padding: 0 2.5%;
 }
 
 header {
@@ -271,23 +272,23 @@ section.services-facts div.text li {
   margin: 10px 0;
 }
 
-section.hero {
+section.top-content {
   display: flex;
   margin-top: 75px;
 }
 
-div.hero-headline {
+section.top-content div.headline {
   display: flex;
   flex-direction: column;
   width: 50%;
 }
 
-div.hero-headline h2 {
+section.top-content div.headline h2 {
   font-size: 82px;
   text-align: center;
 }
 
-div.hero-headline-button {
+section.top-content div.headline button {
   width: 175px;
   border: 1px solid black;
   padding: 8px 10px;
@@ -296,16 +297,13 @@ div.hero-headline-button {
   margin: 0 auto;
 }
 
-div.hero-image {
+section.top-content img {
   display: flex;
   width: 50%;
-}
-
-div.hero-image img {
   margin-left: 48px;
 }
 
-section.first-content {
+section.middle-content {
   display: flex;
   margin-top: 100px;
   margin-bottom: 50px;
@@ -313,23 +311,23 @@ section.first-content {
   padding-top: 40px;
 }
 
-section.first-content div {
+section.middle-content div {
   display: flex;
   flex-direction: column;
   width: 50%;
   padding: 0 10px;
 }
 
-div.middle-img {
+div.middle-img img {
   width: 100%;
   margin-bottom: 50px;
 }
 
-section.second-content {
+section.bottom-content {
   display: flex;
 }
 
-section.second-content div {
+section.bottom-content div {
   display: flex;
   flex-direction: column;
   width: 33.33%;
@@ -361,4 +359,40 @@ div.copyright {
 
 div.copyright.services-page {
   margin-top: 70px;
+}
+
+@media (max-width: 800px) {
+  header nav {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  header nav img {
+    margin: 0 auto;
+  }
+
+  header nav div.text-links {
+    margin: 45px auto 0px auto;
+  }
+
+  header nav div.text-links {
+    display: flex;
+    width: 100%;
+    padding: 0 55px 0 12px;
+    justify-content: space-between;
+  }
+
+  section.top-content div.headline {
+    width: 100%;
+  }
+
+  section.top-content div.headline h2 {
+    font-size: 72px;
+    line-height: 1;
+  }
+
+  section.top-content img {
+    display: none;
+  }
 }
